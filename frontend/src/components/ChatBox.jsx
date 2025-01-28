@@ -37,7 +37,7 @@ const ChatBox = () => {
 
     try {
       let res = await axios.post(
-        "http://localhost:3000/api/ai/get-result",
+        "https://bolt-new-clone-with-mern-stack-backend.onrender.com/api/ai/get-result",
         { prompt },
         { withCredentials: true }
       );
