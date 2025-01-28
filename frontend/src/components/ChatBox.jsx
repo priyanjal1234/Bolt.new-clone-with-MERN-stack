@@ -37,7 +37,7 @@ const ChatBox = () => {
 
     try {
       let res = await axios.post(
-        "https://bolt-new-clone-with-mern-stack-backend.onrender.com/api/ai/get-result",
+        "http://localhost:3000/api/ai/get-result",
         { prompt },
         { withCredentials: true }
       );
@@ -91,7 +91,7 @@ const ChatBox = () => {
       );
 
       webContainer?.on("server-ready", function (port, url) {
-        console.log(port, url);
+        console.log(port, url); 
         setiFrameUrl(url);
       });
     } catch (error) {
@@ -128,7 +128,7 @@ const ChatBox = () => {
         </button>
       )}
       {iFrameUrl && webContainer && (
-        <iframe className="text-white w-[500px] h-[300px] absolute bottom-20 left-[900px] bg-white" src={iFrameUrl}></iframe>
+        <iframe crossorigin="anonymous" className="text-white w-[500px] h-[300px] absolute bottom-20 left-[900px] bg-white" src={iFrameUrl}></iframe>
       )}
     </>
   );
