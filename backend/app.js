@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://bolt-new-clone-with-mern-stack-frontend.onrender.com",
     credentials: true,
   })
 );
